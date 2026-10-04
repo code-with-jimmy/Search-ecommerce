@@ -23,12 +23,14 @@
       padding: 0;
       box-sizing: border-box;
       text-decoration: none;
-    color: #fff !important;
+      color: #fff !important;
     }
 
     body {
       min-height: 100vh;
-      padding: 40px 20px;
+      padding: 20px 20px 40px 20px;
+      /* Upar margin badha diya hai taaki fixed search bar content ko chupaye na */
+      margin-top: 90px; 
       font-family: 'Inter', sans-serif;
 
       background:
@@ -49,13 +51,21 @@
 
 
     /* =========================
-       SEARCH CONTAINER
+       SEARCH CONTAINER (FIXED)
     ========================= */
 
     .search-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px 20px;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
       display: flex;
       justify-content: center;
-      margin-bottom: 35px;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
 
 
@@ -381,7 +391,8 @@
     @media (max-width: 500px) {
 
       body {
-        padding: 25px 15px;
+        padding: 15px 15px 25px 15px;
+        margin-top: 80px;
       }
 
       .items {
@@ -413,7 +424,7 @@
 
 
   <!-- =========================
-       SEARCH
+        SEARCH
   ========================= -->
 
   <div class="search-container">
@@ -428,7 +439,7 @@
 
 
   <!-- =========================
-       PRODUCT LIST
+        PRODUCT LIST
   ========================= -->
 
   <ul class="list"></ul>
@@ -578,4 +589,83 @@
   { name: "Apple Watch Series 9", price: 41900, link: "https://www.amazon.in/dp/B0CHX5R3X2" },
   { name: "Marshall Major IV", price: 12999, link: "https://www.amazon.in/s?k=Marshall+Major+IV" },
   { name: "Sennheiser Momentum 4", price: 29990, link: "https://www.amazon.in/s?k=Sennheiser+Momentum+4" },
-  { name: "OnePlus Buds 3", price: 5499, link: 
+  { name: "OnePlus Buds 3", price: 5499, link: "https://www.amazon.in/s?k=OnePlus+Buds+3" },
+  { name: "Realme Buds T300", price: 2299, link: "https://www.amazon.in/s?k=Realme+Buds+T300" },
+  { name: "Bose QuietComfort Ultra", price: 35990, link: "https://www.amazon.in/s?k=Bose+QuietComfort+Ultra" },
+
+  // --- CAMERAS & SMARTHOME (241 to 270) ---
+  { name: "GoPro Hero 12 Black", price: 37990, link: "https://www.amazon.in/s?k=GoPro+Hero+12" },
+  { name: "Sony Alpha ILCE-7M4", price: 214990, link: "https://www.amazon.in/s?k=Sony+Alpha+7IV" },
+  { name: "Canon EOS R50", price: 65990, link: "https://www.amazon.in/s?k=Canon+EOS+R50" },
+  { name: "Fujifilm X-T50", price: 129990, link: "https://www.amazon.in/s?k=Fujifilm+XT50" },
+  { name: "DJI Mini 4 Pro Drone", price: 89990, link: "https://www.amazon.in/s?k=DJI+Mini+4+Pro" },
+  { name: "Amazon Echo Dot (5th Gen)", price: 4499, link: "https://www.amazon.in/dp/B09B8W4J53" },
+  { name: "Amazon Echo Show 8", price: 11999, link: "https://www.amazon.in/s?k=Echo+Show+8" },
+  { name: "Google Nest Hub (2nd Gen)", price: 7999, link: "https://www.amazon.in/s?k=Google+Nest+Hub" },
+  { name: "Mi Smart Security Camera 2i", price: 2999, link: "https://www.amazon.in/s?k=Mi+Security+Camera" },
+  { name: "CP Plus 360° WiFi Camera", price: 1999, link: "https://www.amazon.in/s?k=CP+Plus+Camera" },
+
+  // --- ACCESSORIES & GAMING (271 to 300) ---
+  { name: "Portronics Power Brick II", price: 1299, link: "https://www.amazon.in/s?k=Portronics+Power+Bank" },
+  { name: "Mi 10000mAh Power Bank", price: 1999, link: "https://www.amazon.in/s?k=Mi+Power+Bank" },
+  { name: "Logitech MX Master 3S", price: 8995, link: "https://www.amazon.in/dp/B09HM94VDS" },
+  { name: "Logitech K380 Keyboard", price: 2495, link: "https://www.amazon.in/dp/B071JV6LZM" },
+  { name: "Zebronics Zeb-Transformer Gaming Keyboard", price: 1399, link: "https://www.amazon.in/s?k=Zebronics+Gaming+Keyboard" },
+  { name: "Cosmic Byte G4000 Headset", price: 1199, link: "https://www.amazon.in/s?k=Cosmic+Byte+Headset" },
+  { name: "TP-Link Archer AX5400 Router", price: 7999, link: "https://www.amazon.in/s?k=TP-Link+Router" },
+  { name: "SanDisk 128GB MicroSD Card", price: 999, link: "https://www.amazon.in/s?k=SanDisk+128GB" },
+  { name: "Samsung 1TB Portable SSD", price: 8999, link: "https://www.amazon.in/dp/B0874X5X4G" },
+  { name: "Razer DeathAdder Essential Mouse", price: 1499, link: "https://www.amazon.in/s?k=Razer+DeathAdder" },
+  { name: "HyperX Cloud Stinger Core", price: 2990, link: "https://www.amazon.in/s?k=HyperX+Headset" },
+  { name: "Crucial X6 1TB Portable SSD", price: 6999, link: "https://www.amazon.in/s?k=Crucial+Portable+SSD" },
+  { name: "Anker 737 Power Bank", price: 11999, link: "https://www.amazon.in/s?k=Anker+Power+Bank" },
+  { name: "Elgato Stream Deck", price: 13990, link: "https://www.amazon.in/s?k=Elgato+Stream+Deck" },
+  { name: "Sony DualSense Wireless Controller", price: 5390, link: "https://www.amazon.in/s?k=PS5+DualSense+Controller" }
+];
+
+let task = document.querySelector("#task")
+let list = document.querySelector(".list")
+
+
+task.addEventListener("input", () => {
+  let user = task.value.trim().toLocaleLowerCase();
+  if(user === ""){
+    list.textContent = "";
+    return;
+  }
+  let data = product.filter((curl) => {
+  let name = curl.name.toLocaleLowerCase();
+  let index = 0;
+  for(let i = 0; i < name.length; i++){
+    if(name[i] === user[index]){
+      index++;
+    }
+  }
+    return index === user.length;
+  })
+
+  list.textContent = "";
+  
+  data.forEach((curl) => {
+    let li = document.createElement("section");
+    li.innerHTML = `
+    <div class="items">
+    <a href="${curl.link}" target="_blank">
+      <h1>product</h1>
+      <h2>name: ${curl.name}</h2>
+      <p>price: ₹${curl.price}</p>
+      </a>
+    </div>
+    `
+    list.append(li);
+  })
+
+})
+
+
+
+  </script>
+
+
+</body>
+</html>
